@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './UpdateProperty.css'; // Import the CSS file here
 
-const UpdateProperty = ({ match, history }) => {
+const UpdateProperty = ({user,data }) => {
     const [property, setProperty] = useState({
         title: '',
         description: '',
@@ -17,10 +17,11 @@ const UpdateProperty = ({ match, history }) => {
         postedBy: ''
     });
 
+    console.log(data)
     useEffect(() => {
         const fetchProperty = async () => {
             try {
-                const response = await axios.get(`/properties/${match.params.id}`);
+                const response = await axios.get(`https://rentify-ycsk.onrender.com/properties/${user}`);
                 setProperty(response.data);
             } catch (error) {
                 console.error("There was an error fetching the property!", error);
@@ -38,8 +39,8 @@ const UpdateProperty = ({ match, history }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.patch(`/properties/up/${match.params.id}`, property);
-            history.push('/');
+            await axios.patch(`https://rentify-ycsk.onrender.com/properties/up/${user}`, property);
+        
         } catch (error) {
             console.error("There was an error updating the property!", error);
         }

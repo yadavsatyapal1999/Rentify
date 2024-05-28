@@ -9,7 +9,7 @@ const PropertyList = () => {
     useEffect(() => {
         const fetchProperties = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/prop/get');
+                const response = await axios.get('https://rentify-ycsk.onrender.com/prop/get');
                 console.log(response)
                 setProperties(response.data);
             } catch (error) {
@@ -22,7 +22,7 @@ const PropertyList = () => {
 
     const deleteProperty = async (id) => {
         try {
-            await axios.delete(`/http://localhost:5000/prop/del/${id}`);
+            await axios.delete(`/https://rentify-ycsk.onrender.com/prop/del/${id}`);
             setProperties(properties.filter(property => property._id !== id));
         } catch (error) {
             console.error("There was an error deleting the property!", error);
@@ -38,7 +38,7 @@ const PropertyList = () => {
                         <li key={property._id}>
                             <span>{property.title} - ${property.price}</span>
                             <span>
-                                <Link to={`/update/${property._id}`}>Update</Link>
+                                <Link to={`/update`} user={`${property._id}`} data={property} >Update</Link>
                                 <button onClick={() => deleteProperty(property._id)}>Delete</button>
                             </span>
                         </li>

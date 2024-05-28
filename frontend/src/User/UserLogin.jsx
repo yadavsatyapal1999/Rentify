@@ -43,7 +43,7 @@ const LoginPage = () => {
       setErrors({});
      // console.log('Login data submitted:', formData);
       axios
-        .post("http://localhost:5000/user/login", formData)
+        .post("https://rentify-ycsk.onrender.com/user/login", formData)
         .then((response) => {
           //console.log(" Login successful");
           //console.log(response.data)

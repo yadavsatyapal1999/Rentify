@@ -53,7 +53,7 @@ const CreateUserForm = () => {
       setErrors({});
       console.log("Form data submitted:", formData);
       axios
-        .post("http://localhost:5000/user/register", formData)
+        .post("https://rentify-ycsk.onrender.com/user/register", formData)
         .then((response) => {
           console.log("Registration successful");
           

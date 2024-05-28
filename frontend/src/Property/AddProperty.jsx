@@ -35,7 +35,7 @@ const navigate =useNavigate()
         };
     
         try {
-            const response = await axios.post('http://localhost:5000/prop/new', property, config);
+            const response = await axios.post('https://rentify-ycsk.onrender.com/prop/new', property, config);
             console.log("Property created successfully:", response.data);
             window.alert("Added Sucssfully");
             navigate("/")
