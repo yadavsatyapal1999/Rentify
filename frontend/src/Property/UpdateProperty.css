@@ -1,0 +1,50 @@
+.update-property-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+    min-height: 100vh;
+}
+
+.update-property-container h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.update-property-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.update-property-form input,
+.update-property-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.update-property-form textarea {
+    resize: vertical;
+}
+
+.update-property-form button {
+    padding: 10px 15px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.update-property-form button:hover {
+    background: #218838;
+}

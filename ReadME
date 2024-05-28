@@ -1,0 +1,4 @@
+TO run this project 
+Backend =>> run npm install ==>> nodemon index.js ==> write you DB id at index.js At mongoose .connect
+frontend ==> npm install ==> npm run dev ==> o+ enter 
+==> forntend add user ,login ,add prperty are working only
